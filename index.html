@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;600&family=Epilogue:wght@500;700&family=Fraunces:ital,wght@1,700;1,900&family=Inter:wght@300;500;700&family=Josefin+Sans:ital,wght@0,400;1,100;1,300;1,600&family=League+Spartan:wght@400;500;700&family=Manrope:wght@500;700&family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&family=Overpass:wght@300;400;700&family=Poppins:ital,wght@0,600;0,700;1,200;1,400&family=Raleway:wght@400;700&family=Roboto:wght@300&family=Rubik:ital,wght@0,400;0,500;0,700;1,300&family=Space+Grotesk:wght@400;500&family=Space+Mono:ital,wght@0,700;1,700&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main__container">
+      <div class="back-card"></div>
+      <div class="main__container--col-1"></div>
+      <div class="main__container--col-2">
+        <div class="confirmation___message">
+          <img src="images/icon-complete.svg" alt="img" srcset="" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="btn">Continue</button>
+        </div>
+        <form class="form">
+          <label for="Name">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            class="Name-value"
+            id="cardholder_name"
+            name="name"
+            placeholder="e.g. Jane Applessed"
+            
+          />
+          <p class="error-name"></p>
+          <label for="number">CARD NUMBER</label>
+          <input
+            type="text"
+            id="card_number"
+            name="number"
+            placeholder="e.g. 1234 5678 9123 000"
+          />
+          <p class="error"></p>
+          <div class="main__container-heading">
+            <label for="exp_date">EXP. DATE (MM/YY)</label>
+            <label for="cvc">cvc</label>
+          </div>
+
+          <div class="lower__date">
+            <div class="title">
+              <input
+                type="text"
+                class="validate-month"
+                id="expi_date"
+                name="exp_date"
+                placeholder="MM"
+              
+              />
+              <input
+                type="text"
+                class="validate-year"
+                id="exp_date"
+                name="exp_date"
+                placeholder="YY"
+                required
+              />
+            </div>
+
+            <nav>
+              <input
+                class="cvc__number"
+                type="text"
+                id="cvc__number"
+                name="cvc"
+                placeholder="e.g. 123"
+              />
+              <p class="cvc-error"></p>
+            </nav>
+            <nav class="position-error">
+              <p class="date-error"></p>
+            </nav>
+          </div>
+          <input class="ctn" type="button" value="Confirm" />
+        </form>
+      </div>
+    </div>
+
+    <div class="front-card">
+      <div class="top-section">
+        <div class="section__white"></div>
+        <div class="section__trasparent"></div>
+      </div>
+      <h1 class="updated-number">0000 0000 0000 0000</h1>
+      <nav class="details_data">
+        <p class="update__name">FELICIA LEIRE</p>
+        <div class="date">
+          <p class="month">09/</p>
+          <p class="year">00</p>
+        </div>
+        
+      </nav>
+    </div>
+    <div class="back-card">
+      <div class="overlay">
+        <p class="update-cvc__value">000</p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" ref="noopener"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Hanzo</a>.
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

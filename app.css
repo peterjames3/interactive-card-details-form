@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary */
+
+  --Linear-gradient
+  /* (active input border) */
+  : hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red
+  /* (input errors) */
+  : hsl(0, 100%, 66%);
+  /*  Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  /*  fontStyle */
+  --family: "Space Grotesk", sans-serif;
+  --weight: 500;
+  --size: 18px;
+}
+
+
+body {
+  font-family: var(--family);
+  position: relative;
+}
+
+.main__container {
+  min-height: 49rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+}
+
+.main__container--col-1 {
+  flex: 25%;
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main__container--col-2 {
+  flex: 75%;
+  display: grid;
+  background-color: rgb(105, 97, 97);
+  place-content: center;
+}
+
+.confirmation___message {
+  align-items: center;
+  padding: 4rem 0rem;
+  text-align: center;
+  width: 350px;
+  height: 300px;
+  color: var(--White);
+  display: none;
+}
+
+.confirmation___message h1 {
+  padding: 1rem 0;
+  color: var(--Very-dark-violet);
+}
+
+.confirmation___message p {
+  color: var(--Dark-grayish-violet);
+}
+
+.btn {
+  width: 100%;
+  margin-top: 2rem;
+  height: 3rem;
+  font-weight: 500;
+  background-color: var(--Very-dark-violet);
+  border-radius: 4px;
+  color: var(--White);
+  font-family: var(--family);
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.8125rem, 0.7542rem + 0.2913vw, 1rem);
+}
+
+.form {
+  display: flex;
+  max-width: 27rem;
+  flex-direction: column;
+  font-family: var(--family);
+  font-size: 15px;
+  position: relative;
+}
+
+ input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  font-size: 18px;
+  font-size: clamp(0.8125rem, 0.7542rem + 0.2913vw, 1rem);
+  font-family: var(--family);
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+input[type="text"]:hover {
+  cursor: pointer;
+  border: 1px solid var(--Very-dark-violet);
+}
+/* #card_number,
+#cvc__number
+{
+  border:1px solid red;
+} */
+.main__container-heading {
+  display: flex;
+  gap: 1.9rem;
+  margin: 1rem 0;
+  font-size: 18px;
+  font-family: var(--family);
+}
+
+.lower__date {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.title {
+  flex: 40%;
+  display: flex;
+  gap: 10px;
+  margin-right: 1rem;
+}
+
+.error,
+.cvc-error,
+.date-error,
+.error-name {
+  color: var(--Red);
+}
+
+.date {
+  display: flex;
+}
+
+
+.title input[type="text"] {
+  width: 80px;
+  height: 46.99px;
+  text-align: center;
+  font-size: clamp(0.8125rem, 0.7542rem + 0.2913vw, 1rem);
+}
+
+nav {
+  flex: 50%;
+}
+
+.form input[type="button"] {
+  padding: 12px;
+  font-size: 18px;
+  font-family: var(--family);
+
+  border: none;
+  background: var(--Very-dark-violet);
+  font-size: clamp(0.8125rem, 0.7542rem + 0.2913vw, 1rem);
+  color: var(--White);
+  border-radius: 0.5rem;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+.position-error {
+  position: absolute;
+  top: 72%;
+  left: 1%;
+}
+
+.front-card {
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: clamp(0.8125rem, 0.7542rem + 0.2913vw, 1rem);
+  position: absolute;
+  width: 360px;
+  top: 15%;
+  left: 2%;
+  padding: 0.9rem;
+  color: var(--White);
+  height: 200px;
+  border-radius: 0.5rem;
+}
+
+.top-section {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+  width: 12rem;
+}
+
+.section__white {
+  margin-right: 0.5rem;
+
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.section__trasparent {
+  background-color: transparent;
+  border-radius: 2rem;
+  border: 1px solid white;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.details_data {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.back-card {
+  background-image: url("images/bg-card-back.png");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 360px;
+  position: absolute;
+
+  top: 48%;
+  left: 12%;
+  border-radius: 0.5rem;
+  z-index: 5;
+}
+
+.overlay {
+  position: absolute;
+  top: 45%;
+  right: 11%;
+
+  opacity: 0.5;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+  .main__container {
+    display: block;
+  }
+
+  .main__container--col-1 {
+    height: 18rem;
+  }
+
+  .main__container--col-2 {
+    flex: 50%;
+    height: 40rem;
+    padding: 2rem;
+  }
+
+  .front-card {
+    z-index: 99;
+    height: 180px;
+    width: 340px;
+    top: 22%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .back-card {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 180px;
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  .front-card {
+    z-index: 99;
+    height: 180px;
+    width: 300px;
+
+    top: 22%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .top-section {
+    margin-bottom: 2rem;
+  }
+
+  .details_data {
+    margin-top: 1rem;
+  }
+
+  .back-card {
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    height: 180px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1220px) {
+  .front-card {
+    z-index: 99;
+    height: 190px;
+    width: 330px;
+    top: 22%;
+    font-size: 14.5px;
+    left: 19%;
+    transform: translate(-50%, -50%);
+  }
+  .form {
+  
+    max-width: 27rem;
+    
+   
+  
+  }
+
+  .top-section {
+    margin-bottom: 2rem;
+  }
+
+  .details_data {
+    margin-top: 1rem;
+  }
+
+  .back-card {
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    height: 190px;
+    max-width: 330px;
+  }
+}
