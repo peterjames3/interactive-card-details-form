@@ -110,7 +110,7 @@ else{
   errorNameEl.textContent = "";
 }
   // Validate card number
-  if (newcardNumber.length > 16 || isNaN(newcardNumber)) {
+  if (newcardNumber===""||newcardNumber.length > 16 || isNaN(newcardNumber)) {
     errorMessage.textContent = "Wrong format, numbers only";
     isValid = false; // Set flag to false
   } else {
